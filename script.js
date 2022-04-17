@@ -6,7 +6,10 @@ const model = [
 
 const $site = document.querySelector("#site");
 
+console.log(model[0].type);
+
 model.forEach((block) => {
+  //  console.log()
   let html = "";
   if (block.type === "title") {
     html = `<div class="row">
@@ -21,17 +24,17 @@ model.forEach((block) => {
       </div>
   </div>`;
   } else if (block.type === "columns") {
-    html = ` <div class="row">
-      <div class="col-sm">
-          ${block.value[0]}
-      </div>
-      <div class="col-sm">
-      ${block.value[1]}
-      </div>
-      <div class="col-sm">
-      ${block.value[2]}
-      </div>
-  </div>`;
+    //   html = ` <div class="row">
+    //     <div class="col-sm">
+    //         ${block.value[0]}
+    //     </div>
+    //     <div class="col-sm">
+    //     ${block.value[1]}
+    //     </div>
+    //     <div class="col-sm">
+    //     ${block.value[2]}
+    //     </div>
+    // </div>`;
   }
 
   $site.insertAdjacentHTML("beforebegin", html);
